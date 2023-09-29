@@ -9,6 +9,6 @@ metadata:
 spec:
   source:
     git:
-      url: https://github.com/v-kay/trading/trading.git
+      url: https://github.com/v-kay/trading.git
       ref:
         branch: main
