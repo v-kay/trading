@@ -23,9 +23,9 @@ class WarriorsAgent implements BidAgent {
         final Stock lowerStock = sortedStocks.get(0);
         final Stock higherStock = sortedStocks.get(sortedStocks.size()-1);
         List<BidAgentRequest> bidrequ = new ArrayList<>();
-        if(lowerStock.shares() !=0 )
-            bidrequ.add((new BidAgentRequest(lowerStock.symbol(), lowerStock.shares())));
-            bidrequ.add((new BidAgentRequest(higherStock.symbol(), higherStock.shares())));
+        bidrequ.add((new BidAgentRequest(lowerStock.symbol(), 100)));
+        if(higherStock.shares() !=0 )
+        bidrequ.add((new BidAgentRequest(higherStock.symbol(), higherStock.shares())));
         logger.info("Found a stock with the lower value: {}", lowerStock.symbol());
         return bidrequ;
     }
