@@ -3,7 +3,7 @@ app:
     url: https://sta.az.run.withtanzu.com
   agent:
     strategy: pas
-    user: johndoe
+    user: warriorssg
 
 spring:
   application:
