@@ -19,9 +19,11 @@ class WarriorsAgent implements BidAgent {
         // Sort input stocks against price.
         final List<Stock> sortedStocks = new ArrayList<>(ctx.stocks());
         sortedStocks.sort(Comparator.comparing(Stock::price));
+        final List<Stock> sortedStocks1 = new ArrayList<>(ctx.stocks());
+        sortedStocks1.sort(Comparator.comparing(Stock::shares));
 
         final Stock lowerStock = sortedStocks.get(0);
-        final Stock higherStock = sortedStocks.get(sortedStocks.size()-1);
+        final Stock higherStock = sortedStocks1.get(sortedStocks1.size()-1);
         List<BidAgentRequest> bidrequ = new ArrayList<>();
         bidrequ.add((new BidAgentRequest(lowerStock.symbol(), 100)));
         if(higherStock.shares() !=0 )
