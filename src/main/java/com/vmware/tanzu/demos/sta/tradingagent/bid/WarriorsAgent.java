@@ -32,6 +32,6 @@ class WarriorsAgent implements BidAgent {
 
     @Override
     public String toString() {
-        return "BUY_LOWER_STOCK";
+        return "SUPER PAS";
     }
 }
